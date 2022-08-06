@@ -1,2 +1,2 @@
 # AMANA
-A de-centralized platform for entreprenuers.
+##A de-centralized platform for entreprenuers.
