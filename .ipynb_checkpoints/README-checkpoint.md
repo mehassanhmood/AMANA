@@ -1,6 +1,7 @@
 # AMANA
 ## A de-centralized platform for entreprenuers.
 ### Breaking the barriers.
+![AMANA](globe.jpg)
 
 1. With the advent of technology the world has changed to a global village.
 2. Humans every where have the same basic requirements to survive, why can't we have a universal currency system that we can use to exchange services?
