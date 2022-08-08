@@ -12,3 +12,11 @@
     2. Trust.
     3. Transparency.
     4. De-Centralization.
+6. Having presented with the basic idea behind our product, here is a 3 step transformation of exchange between humans:
+    1. Exchange of goods with goods of equal value.
+    ![Exhcange of goods](step1.jpg)
+    2. The take over of fiat.
+    ![Fiat Rule](step2.jpg)
+    3. Taking a leap forward with digitalization.
+    ![Tokenomics](step3.jpg)
+    
