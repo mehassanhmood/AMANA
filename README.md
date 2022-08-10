@@ -36,7 +36,7 @@
     
     
     ![Tokenomics](step3.jpg)
-<<<<<<< HEAD
+
 #### AMANA Notes:
 1. The starter code files have `pragma solidity ^0.5.0'
 2. Ganache is used as local block chain testing network.
@@ -53,8 +53,3 @@
     2. Metamask (wallet).
     3. Ganache.
     4. Streamlit.
-    
-    
-=======
-    
->>>>>>> 54bf5647fad7c21a09ae79b5d96c02ed6955f579
