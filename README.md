@@ -16,15 +16,15 @@
     1. Exchange of goods with goods of equal value.
     
     
-    ![Exhcange of goods](step1.jpg)
+    ![Exhcange of goods](https://github.com/Nithy29/AMANA/blob/main/Images/step1.jpg)
     
     2. The take over of fiat.
     
     
-    ![Fiat Rule](step2.jpg)
+    ![Fiat Rule](https://github.com/Nithy29/AMANA/blob/main/Images/step2.jpg)
     
     3. Taking a leap forward with digitalization.
     
     
-    ![Tokenomics](step3.jpg)
+    ![Tokenomics](https://github.com/Nithy29/AMANA/blob/main/Images/step3.jpg)
     
