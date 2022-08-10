@@ -7,10 +7,10 @@
 ![AMANA](globe.jpg)
 
 #### Table of content:
-1. The idea.
-2. Blockchain is the answer.
-3. AMANA Notes:
-4. Technical Overview.
+1. [The idea](https://github.com/mehassanhmood/AMANA#the-idea)
+2. [Blockchain is the answer](https://github.com/mehassanhmood/AMANA#blockchain-is-the-answer)
+3. [AMANA Notes](https://github.com/mehassanhmood/AMANA#amana-notes)
+4. [Technical Overview](https://github.com/mehassanhmood/AMANA#technical-overview)
 #### The Idea:    
 1. With the advent of technology the world has changed to a global village. AMANA's goal is to connect talents and recruiters wherever they are in the world while leveraging the power of blockchain!
 2. Humans every where have the same basic requirements to survive, why can't we have a universal currency system that we can use to exchange services?
@@ -53,4 +53,4 @@
     2. Metamask (wallet).
     3. Ganache.
     4. Streamlit.
-3. [title](https://www.example.com)
+3. [Code](https://www.example.com)
