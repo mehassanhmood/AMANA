@@ -23,11 +23,20 @@
     3. Security via smart contract.
 3. Having presented with the basic idea behind our product, here is a 3 step transformation of exchange between humans:
     1. Exchange of goods with goods of equal value.
+    
+    
     ![Exhcange of goods](step1.jpg)
+    
     2. The take over of fiat.
+    
+    
     ![Fiat Rule](step2.jpg)
+    
     3. Taking a leap forward with digitalization.
+    
+    
     ![Tokenomics](step3.jpg)
+<<<<<<< HEAD
 #### AMANA Notes:
 1. The starter code files have `pragma solidity ^0.5.0'
 2. Ganache is used as local block chain testing network.
@@ -46,3 +55,6 @@
     4. Streamlit.
     
     
+=======
+    
+>>>>>>> 54bf5647fad7c21a09ae79b5d96c02ed6955f579
