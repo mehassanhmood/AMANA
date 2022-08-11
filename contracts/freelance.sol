@@ -1,11 +1,8 @@
 // SPDX-License-Identifier: Kevin Calderon
-
 pragma solidity ^0.8.7;
-
 //Contract Import
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol";
-
 contract Amana is ERC721Enumerable {
     ///State Variables
     address payable public immutable feeAccount; //Freelancer Developers Account
@@ -63,7 +60,6 @@ contract Amana is ERC721Enumerable {
         uint date;
     }
 
-    
     constructor(string memory _name, string memory _symbol, uint8 _feePercent) ERC721(_name,_symbol) payable
     {
         feeAccount = payable(msg.sender);
@@ -82,20 +78,15 @@ contract Amana is ERC721Enumerable {
     }
 
     ///Function for mint a Freelancing Service, set the tokenID and Price
-    function mint(string memory nftURI, uint _price, uint _tokenID) public {
+    function mint(string memory nftURI, uint _price, uint _tokenID, address seller) public {
         FreelanceService storage service = servicesAvailable[_tokenID];
-
         ///Increment Freelance Service Count
         ServiceCount ++;
-
-        _mint(address(this),_tokenID);
+        _mint(seller,_tokenID);
         _setTokenURI(_tokenID,nftURI);
-
         require(_tokenID > 0 && _tokenID <= ServiceCount, "service doesn't exist");
-
         ////update service to sold
         service.listed = true;
-
         ///Add New Services to Freelancer Services
         servicesAvailable[ServiceCount] = FreelanceService(
             _tokenID,
@@ -106,37 +97,29 @@ contract Amana is ERC721Enumerable {
     }
 
     ///Function to Purchase a Freelancing Service
-    function purchaseService(uint256 _tokenID) external payable {
-
+    function purchaseService(uint256 _tokenID, address seller, address customer) external payable {
         require(_exists(_tokenID), "Token ID does not exist");
-
         uint256 totalPrice = Sales[_tokenID].price + (Sales[_tokenID].price / 100 * 5);
-
         require(msg.value >= totalPrice, "not enough ether to cover service price and platform fee");
-        _transfer(address(this), msg.sender, _tokenID);
+        _transfer(seller, customer, _tokenID);
     }
 
-
-    function receiveMoney() public payable {
-        balanceReceived += msg.value;
+    function receiveMoney(uint _price) public payable {
+        balanceReceived = _price;
     }
-
 
     function getBalance() public view returns(uint) {
         return address(this).balance;
     }
-
 
     function withdrawMoney() public {
         address payable seller = payable(msg.sender);
         seller.transfer(getBalance());
     }
 
-
     function withdrawMoneyTo(address payable seller) public {
         seller.transfer(getBalance());
     }
-
     
     function userRating(uint _totalreviews, uint _amountofservice, uint _totalrating) view internal returns(uint8) {
         _totalreviews = Reviews / ServiceCount;

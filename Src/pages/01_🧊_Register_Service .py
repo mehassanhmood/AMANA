@@ -81,18 +81,6 @@ def pin_service(service_name, documents,**kwargs):
 
     return json_ipfs_hash, token_json
 
-def get_account():
-    account = generate_account(w3,private_key)
-    return account
-
-def get_nonce(account):
-    nonce = w3.eth.get_transaction_count(account)
-    return nonce
-
-def wait_for_receipt(tx_hash):
-    receipt = w3.eth.waitForTransactionReceipt(tx_hash)
-    return receipt
-
 
 ######################################################################
 ## Load the contract
@@ -169,22 +157,30 @@ else:
             nonce = w3.eth.get_transaction_count(account.address)
             rate = int(rate)
             token_id = int(new_tokenID)
-            #For Ganache
-            tx_hash = contract.functions.mint(service_uri, rate, token_id).transact({'from':freelancer_account,'gas':1000000})
 
-            # tx_hash = contract.functions.mint(freelancer_account,service_uri, rate, 10).transact({'from':freelancer_account,'gas':1000000})
-            # st.write("Raw TX: ", tx_hash)
+            #For Ganache
+            tx_hash = contract.functions.mint(service_uri, rate, token_id, freelancer_account).transact(
+                                              {'from':freelancer_account,'gas':1000000})
 
             # This generally works on the mainnet - Rinkeby, not so much
             receipt = w3.eth.waitForTransactionReceipt(tx_hash)
             
             # Write the registerd service to local DB
-            usr.RegisterService(st.session_state.User, area_exp, service_uri, token_json['image'], token_id)
+            try:
+                tokenuri = token_json['image']
+            except:
+                tokenuri = ""
+                
+
+            usr.RegisterService(st.session_state.User, area_exp, service_uri, tokenuri, token_id)
 
             st.write("Service Registered on the Blockchain!")
             st.write(dict(receipt))
 
             st.write("You can view the service posted with the following links")
             st.markdown(f"[Service IPFS Gateway Link] (https://{service_uri})")
-            st.markdown(f"[Service IPFS Image Link] (https://{token_json['image']})")
+            if tokenuri == "":
+                pass
+            else:
+                st.markdown(f"[Service IPFS Image Link] (https://{token_json['image']})")
 
