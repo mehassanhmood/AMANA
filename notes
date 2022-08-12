@@ -1,0 +1,18 @@
+    struct FreelanceService{
+        uint256 itemId;  
+        IERC721 nft;
+        uint256 tokenId;
+        uint256 price;
+        address payable seller;
+        bool sold;
+    }
+
+
+create token 
+  nft;
+  tokenId; 
+  price;
+  address payable seller;  
+  bool sold;
+
+

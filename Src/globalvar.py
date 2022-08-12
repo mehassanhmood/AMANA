@@ -1,0 +1,9 @@
+userData = ()
+bioData = ()
+talentData = []
+talentUser = []
+talentUserEmail = []
+talentUserHash = []
+talenForUser = []
+Freelancer = bool
+Title = ""
