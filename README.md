@@ -53,3 +53,8 @@
     7. Streamlit.
 3. [Solidity File](https://github.com/mehassanhmood/AMANA/blob/main/contracts/freelance.sol)
 4. [Src](https://github.com/mehassanhmood/AMANA/tree/main/Src)
+#### Contributors :
+1. Kevin  Calderon
+2. Sarvan Veluppillai
+3. Ali Ait
+4. Hassan Mehmood
