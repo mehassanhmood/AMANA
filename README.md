@@ -51,4 +51,4 @@
     5. Metamask (Wallet).
     6. Ganache.
     7. Streamlit.
-3. [Code](https://www.example.com)
+3. [Solidity File](https://github.com/mehassanhmood/AMANA/blob/main/contracts/freelance.sol)
